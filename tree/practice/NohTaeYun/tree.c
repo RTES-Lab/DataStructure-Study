@@ -2,8 +2,8 @@
 #define Maxsize 200001
 
 typedef struct tree{
-    unsigned int left;
-    unsigned int right;
+    int left;
+    int right;
 }Tree;
 
 int main(void){
@@ -13,7 +13,7 @@ int main(void){
 
     scanf(" %u",&n);
     for(int i = 1;i <= n;i++){
-        scanf(" %u %u",&arr[i].left,&arr[i].right); //편의상 인덱스가 1인 원소를 1번 노드라 하자.
+        scanf(" %d %d",&arr[i].left,&arr[i].right); //편의상 인덱스가 1인 원소를 1번 노드라 하자.
     }
     scanf(" %lu",&k);
     unsigned int now = 1; 
