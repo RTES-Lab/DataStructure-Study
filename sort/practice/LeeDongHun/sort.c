@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define llint long long int
 #define f(x) (x>0 ? x : -x)    // 절댓값 함수
 
 int ComparePoint( const void *_elem1, const void *_elem2 ){
-    llint* elem1 = (llint*)_elem1;
-    llint* elem2 = (llint*)_elem2;
+    int* elem1 = (int*)_elem1;
+    int* elem2 = (int*)_elem2;
  
     if ( *elem1 > *elem2)
         return 1; 
@@ -17,23 +16,23 @@ int ComparePoint( const void *_elem1, const void *_elem2 ){
 }
 
 int main(){
-    llint* arr;
-    llint min, sum;
+    int* arr;
+    int min, sum;
     int Left, Right;
     int N, i;
     int a1, a2, a3;
 
     scanf(" %d", &N);
     
-    arr=(llint*)malloc(sizeof(llint)*N);
+    arr=(int*)malloc(sizeof(int)*N);
 
     for(i=0; i<N; i++)
-        scanf(" %lld", &arr[i]);
+        scanf(" %d", &arr[i]);
     
-    qsort(arr, N, sizeof(llint), ComparePoint);
+    qsort(arr, N, sizeof(int), ComparePoint);
     
     if(arr[N-1]<0){    // 모든 용액이 음수인 경우
-        printf("%lld %lld %lld", arr[N-3], arr[N-2], arr[N-1]);
+        printf("%d %d %d", arr[N-3], arr[N-2], arr[N-1]);
         return 0;
     }
     
@@ -68,5 +67,5 @@ int main(){
         }
         i++;
     }
-    printf("%lld %lld %lld", arr[a1], arr[a2], arr[a3]);
+    printf("%d %d %d", arr[a1], arr[a2], arr[a3]);
 }
