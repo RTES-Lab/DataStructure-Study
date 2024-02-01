@@ -20,9 +20,9 @@ int ComparePoint( const void *_elem1, const void *_elem2){
 
 int main(void){
     int n;
-    long arr[5000] = {0};
     long val[3] = {0};
     scanf(" %d",&n);
+		long* arr = (long*)malloc(sizeof(long) * n);
     for(int i = 0;i < n;i++){
         scanf(" %ld",&arr[i]);
     }
@@ -45,6 +45,7 @@ int main(void){
                 R--;
         }    
     }
+		free(arr);
     printf("%ld %ld %ld\n",val[0],val[1],val[2]);
     return 0;
 }
