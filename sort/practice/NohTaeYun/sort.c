@@ -22,7 +22,7 @@ int main(void){
     int n;
     long val[3] = {0};
     scanf(" %d",&n);
-		long* arr = (long*)malloc(sizeof(long) * n);
+    long* arr = (long*)malloc(sizeof(long) * n);
     for(int i = 0;i < n;i++){
         scanf(" %ld",&arr[i]);
     }
@@ -45,7 +45,7 @@ int main(void){
                 R--;
         }    
     }
-		free(arr);
+    free(arr);
     printf("%ld %ld %ld\n",val[0],val[1],val[2]);
     return 0;
 }
