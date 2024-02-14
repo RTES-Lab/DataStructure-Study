@@ -1,4 +1,4 @@
-//시간 초과 + 의도대로 결과값이 안 나와서 수정이 필요함
+//시간 초과 + 의도대로 결과값이 안 나와서 수정이 필요함(수정 중..)
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,7 +16,7 @@ int BinarySearch(int arr[], int Size, int Target)
     {
         Mid = (Left + Right) / 2;
 
-        if (arr[Mid - 1] < Target <= arr[Mid])
+        if (arr[Mid - 1] < Target && Target <= arr[Mid])
             return arr[Mid];
         else if ( Target > arr[Mid])
             Left = Mid + 1;
